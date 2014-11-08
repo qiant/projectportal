@@ -1,9 +1,9 @@
 applications:
 - services:
-  - projectportal2-sqldb
+  - SQL Database-ok
   disk_quota: 1024M
-  host: projectportal2
-  name: projectportal2
+  host: projectportal
+  name: projectportal
   path: libertyDBApp.war
   domain: mybluemix.net
   instances: 1

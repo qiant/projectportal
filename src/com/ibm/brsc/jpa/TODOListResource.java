@@ -33,11 +33,23 @@ public class TODOListResource {
 	}
 
 	@POST
-	public Response create(@FormParam("name") String name, @FormParam("serviceLine") String serviceLine, @FormParam("age") int age) {
+	public Response create(@FormParam("name") String name, 
+			@FormParam("serviceLine") String serviceLine,
+			@FormParam("numPlanRoles") long numPlanRoles, 
+			@FormParam("numNonInterlock") long numNonInterlock,
+			@FormParam("numInterlock") long numInterlock,
+			@FormParam("skillsRequired") String skillsRequired,
+			@FormParam("numOfResources") long numOfResources,
+			@FormParam("age") int age) {
 		TODO todo = new TODO();
 		todo.setName(name);
 		todo.setServiceLine(serviceLine);
-
+		todo.setNumPlanRoles(numPlanRoles); 
+		todo.setNumNonInterlock(numNonInterlock);
+		todo.setNumInterlock(numInterlock);
+		todo.setSkillsRequired(skillsRequired);
+		todo.setNumOfResources(numOfResources);
+		
 		try {
 			utx.begin();
 			em.persist(todo);
@@ -85,13 +97,27 @@ public class TODOListResource {
 
 	@PUT
 	public Response update(@FormParam("id") long id,
-			@FormParam("name") String name, @FormParam("serviceLine") String serviceLine, @FormParam("age") int age) {
+			@FormParam("name") String name, @FormParam("serviceLine") String serviceLine, 
+			@FormParam("numPlanRoles") long numPlanRoles, 
+			@FormParam("numNonInterlock") long numNonInterlock,
+			@FormParam("numInterlock") long numInterlock,
+			@FormParam("skillsRequired") String skillsRequired,
+			@FormParam("numOfResources") long numOfResources,
+			
+			@FormParam("age") int age) {
 		try {
 			utx.begin();
 			TODO todo = em.find(TODO.class, id);
 			if (todo != null) {
 				todo.setName(name);// TODO check if null
 				todo.setServiceLine(serviceLine);
+				todo.setNumPlanRoles(numPlanRoles); 
+				todo.setNumNonInterlock(numNonInterlock);
+				todo.setNumInterlock(numInterlock);
+				todo.setSkillsRequired(skillsRequired);
+				todo.setNumOfResources(numOfResources);
+		
+				
 				em.merge(todo);
 				utx.commit();
 				return Response.ok().build();
