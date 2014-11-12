@@ -6,6 +6,11 @@
    <link rel="stylesheet" href="resources/style.css">
    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
    <script src="resources/script.js"></script>
+   <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+   <script type="text/javascript" src="./resources/dualList.js"></script>
+   <style type="text/css">
+       .btn {width:90px;}
+   </style> 
    <title>Project Portal Menu</title>
 </head>
 
@@ -16,7 +21,7 @@
 
 <div id='logo'>
 	<div class='container'>
-		<img src="PP-Logo-2.png" alt="IBM Project Portal">
+		<img src="images/PP-Logo-2.png" alt="IBM Project Portal">
 	</div>
 </div>
 
@@ -29,7 +34,7 @@
             <ul>
                <li><a href='addClient.jsp'>Add</a></li>
                <li><a href='#'>Edit</a></li>
-			   <li><a href='listClient.jsp'>List</a></li>
+			   <li><a href='#'>List</a></li>
             </ul>
          </li>
       </ul>
