@@ -5,8 +5,6 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<%-- <link rel="stylesheet" href="${pageContext.request.contextPath}/style.css" />
-<script type="text/javascript" src="${pageContext.request.contextPath}/script.js }" /></script> --%>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Login</title>
 </head>
@@ -21,26 +19,15 @@
 	 <div style="color: #FF0000;">${errorMessage}</div>
 		<table cellpadding="3pt">
 			<tr>
-				<td><input type="text" name="username" size="30" value="User Name" onfocus="if (this.value=='User Name') this.value = ''" required/></td>
+				<td align="right">Username:</td>
+				<td align="right"><input type="text" name="username" size="30" required/></td>
 			</tr>
 			<tr>
-				<td><input type="text" name="password" size="30" value="Password" onfocus="if (this.value=='Password') this.value = '';this.type='password'" required/></td>
+				<td align="right">Password:</td>
+				<td align="right"><input type="text" name="password" size="30" required/></td>
 			</tr>
-
-			
 		</table>
-		<!-- <table>
-			
-			<tr>
-				<td>
-					<input type="textfield" name="scureCode" size="30"
-						value="Security Code" onfocus="this.type='password';this.value=''" required
-						onload="this.blur()" /> <input type="submit" value="Login" />
-				</td>
-			</tr>
-
-			
-		</table> -->
+		<input type="submit" style="color:white; background-color:#44749D" value="Log-In" /><p>
 		<a href="${pageContext.request.contextPath}/register.jsp">Not a member? Register here!</a><br/>
 		
 	</form>
