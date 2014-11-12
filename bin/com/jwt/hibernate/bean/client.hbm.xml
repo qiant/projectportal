@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.jwt.hibernate.bean.Client" table="CLIENT">
+		<id column="ID" name="id" type="java.lang.Integer" />
+		<property column="CLIENT_NAME" name="clientName" type="java.lang.String" />
+		<property column="YEAR" name="year" type="java.lang.String" />
+		<property column="QUARTER" name="quarter" type="java.lang.String" />
+		<property column="ODDS" name="odds" type="java.lang.String" />
+		<property column="STAFF_NUMBER" name="staffNumber" type="java.lang.Integer" />
+		<property column="NON_INTERLOCK_NUM" name="nonInterlockNumber" type="java.lang.Integer" />
+		<property column="INTERLOCK_NUM" name="interlockNumber" type="java.lang.Integer" />
+		<property column="RESOURCE_NUMBER" name="resourceNumber" type="java.lang.Integer" />
+		<property column="CONTACT_INFO" name="contactInfo" type="java.lang.String" />
+		<property column="COMMMENTS" name="comments" type="java.lang.String" />
+		<property column="STATUS" name="status" type="java.lang.String" />
+		<one-to-one name="serviceLine" class="com.jwt.hibernate.bean.ServiceLine"
+			cascade="save-update"></one-to-one>
+	  <many-to-one name="Skills" column="SKILL_ID" 
+       class="com.jwt.hibernate.bean.Skill" not-null="true"/>
+      <!--  <set name="skills" table="SKILL" 
+				inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="SKILL_ID" not-null="true" />
+            </key>
+            <one-to-many class="com.jwt.hibernate.bean.Skill" />
+        </set> -->
+	</class>
+</hibernate-mapping>
