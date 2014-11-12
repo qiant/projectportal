@@ -13,5 +13,6 @@
 	<classpathentry kind="lib" path="dep-jar/com.ibm.ws.javaee.persistence.2.0_1.0.1.jar"/>
 	<classpathentry kind="lib" path="dep-jar/com.ibm.ws.javaee.jaxrs.1.1_1.0.1.jar"/>
 	<classpathentry kind="lib" path="dep-jar/com.ibm.ws.javaee.transaction.1.1_1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/apache-tomcat-8.0.14/lib/servlet-api.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
