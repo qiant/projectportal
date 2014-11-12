@@ -24,7 +24,7 @@
 			</tr>
 			<tr>
 				<td align="right">Password:</td>
-				<td align="right"><input type="text" name="password" size="30" required/></td>
+				<td align="right"><input type="password" name="password" size="30" required/></td>
 			</tr>
 		</table>
 		<input type="submit" style="color:white; background-color:#44749D" value="Log-In" /><p>
