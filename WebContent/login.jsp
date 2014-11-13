@@ -19,12 +19,10 @@
 	 <div style="color: #FF0000;">${errorMessage}</div>
 		<table cellpadding="3pt">
 			<tr>
-				<td align="right">Username:</td>
-				<td align="right"><input type="text" name="username" size="30" required/></td>
+				<td><input type="text" name="username" size="30" value="User Name" onfocus="if (this.value=='User Name') this.value = ''" required/></td>
 			</tr>
 			<tr>
-				<td align="right">Password:</td>
-				<td align="right"><input type="password" name="password" size="30" required/></td>
+				<td><input type="text" name="password" size="30" value="Password" onfocus="if (this.value=='Password') this.value = '';this.type='password'" required/></td>
 			</tr>
 		</table>
 		<input type="submit" style="color:white; background-color:#44749D" value="Log-In" /><p>
